@@ -1,3 +1,3 @@
-import { divide } from "./test/maths"
+import { main } from "./enigma"
 
-console.log(divide(4,2))
+main()
