@@ -30,6 +30,7 @@ function barrel_1(position, order_1, displacement_1){
     temporary_position = order_1[position + displacement_1 + 1]; 
     // die Eingabe wird unter beachtung der verschiebung zur neuen Zahl gedreht
     position = temporary_position + displacement_1 + 1;
+    // Trommel ist rund, hier wenns rund geht ->
     if(position > 26){
         position = position - 26;
     }
