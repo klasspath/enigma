@@ -20,16 +20,13 @@ function encryption(input, output, position, displacement){
     displacement_1 = displacement[0];
     displacement_2 = displacement[1];
     displacement_3 = displacement[2];
-     
-    //durchlauf durch die Rollen (hin)
-    position = barrel_1(position, order_1, displacement_1); 
-    //  position = barrel_2(position, order_2, displacement_2);
-    //  position = barrel_3(position, order_3, displacement_3);
-    //durchlauf durch die Rollen (zurück)
-
+        
+    position = barrel_1(position, order_1, displacement_1); //geht jetzt
+    position = barrel_2(position, order_2, displacement_2);
+    position = barrel_3(position, order_3, displacement_3);
+    
         //fehlt noch zurüch muss anders als hin(?)
 
-    // Temporär, muss dann zum Buchstaben gemacht werden...
     output = position
 
     return output;
@@ -37,10 +34,8 @@ function encryption(input, output, position, displacement){
 function barrel_1(position, order_1, displacement_1){
     let rotation = 1;
     let letter = 0;
-    console.log(position)
-    console.log(displacement_1)
     letter = order_1[position + displacement_1 + rotation - 1]; // -1 weil array bei null startet
-    position = letter - displacement_1 + rotation;
+    position = letter - displacement_1 - rotation;
     if(position > 26){
         position = position - 26;
     }
