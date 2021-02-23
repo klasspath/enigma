@@ -3,7 +3,7 @@ export function main(){
     let output = 0;
     let result = "Error";
     let position = 0; // welcher Buchstabe
-    let displacement = [4,15,7]
+    let displacement = [4,15,7];
     output = encryption(input, output, position, displacement);
     
     console.log(output)
@@ -16,13 +16,15 @@ function encryption(input, output, position, displacement){
     let order_2 = [1,10,4,11,19,9,18,21,24,2,12,8,23,20,13,3,17,7,26,14,16,25,6,22,15,5];
     let order_3 = [2,4,6,8,10,12,3,16,18,20,24,22,26,14,25,5,9,23,7,1,11,13,21,19,17,15];
     position = input;
-    displacement_1 = displacemnet[0];
+    displacement_1 = displacement[0];
     displacement_2 = displacement[1];
     displacement_3 = displacement[2];
      
     //durchlauf durch die Rollen (hin)
     position = barrel_1(position, order_1, displacement_1);
+    console.log(position)
     position = barrel_2(position, order_2, displacement_2);
+    console.log(position)
     position = barrel_3(position, order_3, displacement_3);
     //durchlauf durch die Rollen (zurück)
 
@@ -37,7 +39,7 @@ function barrel_1(position, order_1, displacement_1){
     let rotation = 1;
     let temporary_position = 0;
     temporary_position = order_1[position + displacement_1 + rotation]; 
-    // die Eingabe wird unter beachtung der verschiebung zur neuen Zahl gedreht
+    // die Eingabe wird unter beachtung der verschiebung (rotation) zur neuen Zahl gedreht
     position = temporary_position + displacement_1 + rotation;
     // Trommel ist rund, hier wenns rund geht ->
     if(position > 26){
