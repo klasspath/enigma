@@ -1,3 +1,1 @@
-import { main } from "./enigma"
-
-main()
+import "./src/main"
