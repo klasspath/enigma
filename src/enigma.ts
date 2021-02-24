@@ -8,7 +8,7 @@ export default function main() {
     console.log(output)
 }
 
-function encryption(input, output, position, displacement) {
+function encryption(input: number, output: number, position: number, displacement: number[]) {
     let displacement_1 = 0;
     let displacement_2 = 0;
     let displacement_3 = 0;
