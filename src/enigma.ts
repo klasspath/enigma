@@ -21,9 +21,12 @@ function encryption(input: number, output: number, position: number, displacemen
     displacement_2 = displacement[1];
     displacement_3 = displacement[2];
 
-    position = barrel_1(position, order_1, displacement_1); //geht jetzt
+    position = barrel_1(position, order_1, displacement_1);
     position = barrel_2(position, order_2, displacement_2);
     position = barrel_3(position, order_3, displacement_3);
+    position = barrel_3(position, order_3, displacement_3);
+    position = barrel_2(position, order_2, displacement_2);
+    position = barrel_1(position, order_1, displacement_1);
 
     //fehlt noch zurüch muss anders als hin(?)
 
@@ -32,16 +35,18 @@ function encryption(input: number, output: number, position: number, displacemen
     return output;
 }
 
+/*
 interface Barrel {
     displacement: number;
     order: number[];
 }
+*/
 
 function barrel_1(position: number, order_1: number[], displacement_1: number) {
-    let rotation = 1;
+    displacement_1 = displacement_1 + 1; // verschiebung wird um 1 erweitert
     let letter = 0;
-    letter = order_1[position + displacement_1 + rotation - 1]; // -1 weil array bei null startet
-    position = letter - displacement_1 - rotation;
+    letter = order_1[position + displacement_1 - 1]; // -1 weil array bei null startet
+    position = letter - displacement_1;
     if (position > 26) {
         position = position - 26;
     }
