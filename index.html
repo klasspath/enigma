@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Die Enigma als WebApp" />
     <title>Enigma</title>
-  </head>
-  <body>
-      <img src=“Enigma.jpg“>.
-    <h1>Enigma</h1>
-    <h2>Info-Projekt</h2>
-    <h3>Drücke den roten Button um zu beginnen</h3>
+</head>
+
+<body>
+
+    <img src="Enigma.jpg">
+    <p>   </p>
+    <h2>Eingaben in Feldern müssen als Zahlenwerte der gewählten Buchstaben erfolgen!</h2>
+    <input type="text" name="Walze 1" placeholder="1.Walze">
+    <input type="text" name="Walze 2" placeholder="2.Walze">
+    <input type="text" name="Walze 3" placeholder="3.Walze">
+
+    <p>   </p>
+
+    <input type="text" name="Eingabe" id="input" placeholder="Eingabe">
+    <input type="text" name="Ausgabewert" placeholder="Endwert">
+
+    <p>   </p>
+
+    <button type="submit" formaction="check.php" id="decode-button">Verschlüsseln</button>
+    <button type="submit" formaction="send.php">Entschlüsseln</button><p>   </p>
+    <h1></h1>
+    
+    <h3>Gib deine gewählten Werte ein, um zu beginnen!</h3>
     <script type="module" src="/index.js"></script>
-  </body>
+</body>
+
 </html>
