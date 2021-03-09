@@ -1,35 +1,65 @@
 <!DOCTYPE html>
+
 <html lang="de">
+<html background-color: #00539F;>
+</background-color:>
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Die Enigma als WebApp" />
     <title>Enigma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
 </head>
 
 <body>
 
-    <img src="Enigma.jpg">
-    <p>   </p>
-    <h2>Eingaben in Feldern müssen als Zahlenwerte der gewählten Buchstaben erfolgen!</h2>
-    <input type="text" name="Walze1" placeholder="1.Walze" id="w1">
-    <input type="text" name="Walze2" placeholder="2.Walze" id="w2">
-    <input type="text" name="Walze3" placeholder="3.Walze" id="w3">
-
-    <p>   </p>
-
-    <input type="text" name="Eingabe" id="input" placeholder="Eingabe">
-    <input type="text" name="Ausgabewert" id="result" placeholder="Endwert">
-
-    <p>   </p>
-
-    <button type="submit" formaction="check.php" id="decode-button">Verschlüsseln</button>
-    <button type="submit" formaction="send.php" id="new-decode-button">Entschlüsseln</button><p>   </p>
-    <h1></h1>
+   <div style="text-align: center;">
+   <img src="Enigma.jpg" width="300" height="200" />
+   <p><FONT SIZE="130">Die Enigma</FONT></p>
+   <p><h2>Eingaben in Feldern müssen als Zahlenwerte der gewählten Buchstaben erfolgen!</h2></p>
     
-    <h3>Gib deine gewählten Werte ein, um zu beginnen!</h3>
-    <script type="module" src="/index.js"></script>
-</body>
+   </div>
+
+
+   
+   
+   
+   
+   
+   </div>
+
+      
+        <p> </p>
+       
+        <div style="max-width: 600px; display: flex; text-align: center;">
+            
+            <input type="text" class="form-control" name="Walze1" placeholder="1.Walze" id="w1">
+            <input type="text" class="form-control" name="Walze2" placeholder="2.Walze" id="w2">
+            <input type="text" class="form-control" name="Walze3" placeholder="3.Walze" id="w3">
+        </div>
+      
+
+        <p> </p>
+
+        <div style="max-width: 300px; display: flex;">
+        <input type="text" class="form-control" name="Eingabe" id="input" placeholder="Eingabe">
+        <input type="text" class="form-control" name="Ausgabewert" id="result" placeholder="Endwert">
+        </div>
+
+       
+
+        <p> </p>
+
+        <button class="btn btn-primary" type="submit" id="decode-button">Verschlüsseln</button>
+        <button class="btn btn-danger" type="submit" id="new-decode-button">Entschlüsseln</button>
+        <p> </p>
+        <h1></h1>
+
+        <h3>Gib deine gewählten Werte ein, um zu beginnen!</h3>
+        <script type="module" src="/index.js"></script>
+    </body>
 
 </html>
