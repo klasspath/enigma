@@ -10,27 +10,24 @@ const decodeButton = document.getElementById("decode-button")
 decodeButton.addEventListener("click", onDecodeButtonClicked)
 
 const newinputField = <HTMLInputElement>document.getElementById("newinput")
-
-const newdecodeButton = document.getElementById("new-decode-button")
-newdecodeButton.addEventListener("click", onNewDecodeButtonClicked)
-
 const resultOutput = <HTMLInputElement>document.getElementById("result")
-
-
-
+const resetButton = <HTMLInputElement>document.getElementById("reset-button")
+resetButton.addEventListener("click", onResetButtonClicked)
 
 function onDecodeButtonClicked() {
     const w1Value = letterToNumber(w1.value)
     const w2Value = letterToNumber(w2.value)
     const w3Value = letterToNumber(w3.value)
-    main(inputField.value, [w1Value, w2Value, w3Value])
+    let result = main(inputField.value, [w1Value, w2Value, w3Value])
+    const output = document.getElementById("output")
+    output.innerHTML = result.result
+    w1.value = numberToLetter(w1Value + 1)
 }
-function onNewDecodeButtonClicked() {
-    const w1Value = letterToNumber(w1.value)
-    const w2Value = letterToNumber(w2.value)
-    const w3Value = letterToNumber(w3.value)
-    const result = main(inputField.value, [w1Value, w2Value, w3Value])
-    resultOutput.value = result
+
+function onResetButtonClicked() {
+    w1.value = "a"
+    w2.value = "a"
+    w3.value = "a"
 }
 
 export function letterToNumber(input: string): number {
