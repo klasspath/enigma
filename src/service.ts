@@ -1,4 +1,4 @@
-import main from "./enigma"
+import main from "./temporary"
 
 const inputField = <HTMLInputElement>document.getElementById("input")
 
