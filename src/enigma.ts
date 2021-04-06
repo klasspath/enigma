@@ -1,5 +1,5 @@
-import { letterToNumber } from "./service"
-import { numberToLetter } from "./service"
+import { letterToNumber } from "./service";
+import { numberToLetter } from "./service";
 /*
 Es fehlt:
     - walze 2 und 3 weiter drehen
@@ -9,7 +9,7 @@ Es fehlt:
 
 interface Main {
     result: string;
-    displacement: number[]
+    displacement: number[];
 }
 
 export default function main(input: string, displacement: [number, number, number]): Main {
@@ -18,13 +18,13 @@ export default function main(input: string, displacement: [number, number, numbe
     let position = 0;
     let verschlüsseln = true;
     position = letterToNumber(input);
-    if (verschlüsseln = true) {
+    if ((verschlüsseln = true)) {
         output = encryption(output, position, displacement);
-    } else if (verschlüsseln = false) {
+    } else if ((verschlüsseln = false)) {
         output = decryption(output, position, displacement);
     }
-    result = numberToLetter(output)
-    return { result, displacement }
+    result = numberToLetter(output);
+    return { result, displacement };
 }
 function decryption(output: number, position: number, displacement: number[]) {
     //muss das anders?
@@ -61,7 +61,7 @@ function encryption(output: number, position: number, displacement: number[]) {
     position = barrel_1(position, order_1, displacement_1);
     /* console.log("barrel_1, position on: ", position) */
 
-    output = position
+    output = position;
     return output;
 }
 function barrelMirror(position: number, mirrorOrder: number[]) {

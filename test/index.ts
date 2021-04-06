@@ -1,5 +1,5 @@
-import { letterToNumber } from "./service";
-import { numberToLetter } from "./service";
+import { letterToNumber } from "../src/service";
+import { numberToLetter } from "../src/service";
 
 interface Main {
     result: string;
@@ -26,6 +26,7 @@ function encryption(displacement: [number, number, number], position: number): n
     displacement[1] = 1;
     displacement[2] = 1;
     position = 1;
+    
     console.log(position + "start");
 
     for (let i = 0; i < order_1.length; i++) {
@@ -46,10 +47,13 @@ function encryption(displacement: [number, number, number], position: number): n
         }
     }
     console.log(position + "mitte_3");
+    
     position = order_3[position];
     console.log(position + "mitte_1");
+
     position = order_2[position];
     console.log(position + "mitte2");
+
     position = order_1[position];
     console.log(position + "ende3");
 
@@ -62,3 +66,5 @@ function greaterThan26(checkSum: number) {
     }
     return checkSum;
 }
+
+console.log(main("a", [1, 1, 1]))

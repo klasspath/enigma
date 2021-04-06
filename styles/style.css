@@ -4,12 +4,9 @@ body {
 }
 
 .decode-button {
- 
     background-color: green;
-    
 }
 
 .encode-button {
     background-color: red;
 }
-

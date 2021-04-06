@@ -1,1 +1,1 @@
-import "./service"
+import "./service";
