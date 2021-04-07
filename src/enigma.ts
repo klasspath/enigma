@@ -12,11 +12,10 @@ export function runBarrel(position: number, order: number[], displacement: numbe
             position = i;
         }
     }
-    console.log(position)
     position = position - displacement;
 
     if(position < 1){
-        position + order.length - 1;
+        position = position + order.length - 1;
     }
     return position;
 }
@@ -25,10 +24,12 @@ export function reverseBarrel(position: number, order: number[], displacement: n
     let temporaryPosition = position + displacement;
     if (temporaryPosition > order.length - 1) {
         temporaryPosition = temporaryPosition - order.length + 1;
-        console.log("fail");
     }
     position = order[temporaryPosition];
     position = position - displacement;
+    if(position < 1){
+        position = position + order.length - 1;
+    }
     return position;
 }
 
