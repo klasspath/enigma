@@ -1,28 +1,23 @@
 {
-    "name": "inigma",
-    "version": "1.0.0",
-    "main": "index.js",
-    "repository": "https://github.com/klasspath/inigma.git",
-    "author": "Nöl <noel@sigmunczyk.de>",
-    "license": "MIT",
-    "scripts": {
-        "start": "snowpack dev",
-        "format": "prettier --write .",
-        "local": "tsc test/index.ts && node test/index.js"
-    },
-    "devDependencies": {
-        "snowpack": "^3.0.11",
-        "typescript": "^4.2.3"
-    },
-    "dependencies": {
-        "@snowpack/plugin-typescript": "^1.2.1",
-        "pixi.js": "^5.3.7"
-    },
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": true,
-        "singleQuote": false,
-        "printWidth": 140
-    }
+  "name": "test",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.22",
+    "autoprefixer": "^10.2.5",
+    "jest": "^26.6.3",
+    "typescript": "^4.2.3",
+    "vite": "^2.1.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "tailwindcss": "^2.1.1"
+  }
 }
