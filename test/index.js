@@ -18,33 +18,29 @@ function greaterThan26(checkSum) {
     return checkSum;
 }
 function runBarrelOne(position) {
-    //let order = [0, 2, 4, 6, 8, 10, 12, 3, 16, 18, 20, 24, 22, 26, 14, 25, 5, 9, 23, 7, 1, 11, 13, 21, 19, 17, 15];
     var order = [0, 6, 5, 4, 3, 2, 1];
+    var displacement = 2; //muss noch aus Webseite gezogen werden!!!
+    //let order = [0, 2, 4, 6, 8, 10, 12, 3, 16, 18, 20, 24, 22, 26, 14, 25, 5, 9, 23, 7, 1, 11, 13, 21, 19, 17, 15];
+    var temporaryPosition = position + displacement;
+    if (temporaryPosition > order.length - 1) {
+        temporaryPosition = temporaryPosition - order.length + 1;
+    }
     for (var i = 0; i < order.length; i++) {
-        if (position == order[i]) {
+        if (temporaryPosition == order[i]) {
             position = i;
         }
     }
+    position = position - displacement;
     return position;
 }
 function runBarrelTwo(position) {
     //let order = [0, 1, 10, 4, 11, 19, 9, 18, 21, 24, 2, 12, 8, 23, 20, 13, 3, 17, 7, 26, 14, 16, 25, 6, 22, 15, 5];
     var order = [0, 4, 5, 6, 1, 2, 3];
-    for (var i = 0; i < order.length; i++) {
-        if (position == order[i]) {
-            position = i;
-        }
-    }
     return position;
 }
 function runBarrelThree(position) {
     //let order = [0, 2, 4, 6, 8, 10, 12, 3, 16, 18, 20, 24, 22, 26, 14, 25, 5, 9, 23, 7, 1, 11, 13, 21, 19, 17, 15];
     var order = [0, 4, 3, 2, 1, 6, 5];
-    for (var i = 0; i < order.length; i++) {
-        if (position == order[i]) {
-            position = i;
-        }
-    }
     return position;
 }
 function reverseBarrelOne(position) {
@@ -74,13 +70,13 @@ function mirrorPosition(position) {
 function runBarells(position) {
     position = 2;
     console.log("Start: " + position);
-    //position = runBarrelOne(position);
-    position = runBarrelTwo(position);
+    position = runBarrelOne(position);
+    /*position = runBarrelTwo(position);
     position = runBarrelThree(position);
-    //position = mirrorPosition(position);
+    position = mirrorPosition(position);
     position = reverseBarrelThree(position);
     position = reverseBarrelTwo(position);
-    //position = reverseBarrelOne(position);
+    position = reverseBarrelOne(position);*/
     console.log("Ende: " + position);
     return position;
 }
