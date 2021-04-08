@@ -14,7 +14,7 @@ export function runBarrel(position: number, order: number[], displacement: numbe
     }
     position = position - displacement;
 
-    if(position < 1){
+    if (position < 1) {
         position = position + order.length - 1;
     }
     return position;
@@ -27,7 +27,7 @@ export function reverseBarrel(position: number, order: number[], displacement: n
     }
     position = order[temporaryPosition];
     position = position - displacement;
-    if(position < 1){
+    if (position < 1) {
         position = position + order.length - 1;
     }
     return position;
@@ -40,7 +40,7 @@ export function mirrorPosition(position: number): number {
     return position;
 }
 
-export function reverseMirrorPosition(position: number): number {
+/* export function reverseMirrorPosition(position: number): number {
     let mirrorOrder = [0, 25, 18, 21, 8, 17, 19, 12, 4, 16, 24, 14, 7, 15, 11, 13, 9, 5, 2, 6, 26, 3, 23, 22, 10, 1, 20];
     //let mirrorOrder = [0,1,6,2,5,3,4]
     for (let i = 0; i < mirrorOrder.length; i++) {
@@ -49,31 +49,25 @@ export function reverseMirrorPosition(position: number): number {
         }
     }
     return position;
-}
+} */
 
-export default function runBarrels(displacement: [number, number, number], position: number, type: "encrypt" | "decrypt"): number {
+export default function runBarrels(displacement: [number, number, number], position: number): number {
 
     /* let order_One =   [0,6,5,4,3,2,1];
     let order_Two =   [0,4,5,6,1,2,3];
     let order_Three = [0,4,3,2,1,6,5];*/
-    let displacement_One = displacement[0];
-    let displacement_Two = displacement[1];
-    let displacement_Three = displacement[2];
+
     position++;
-    console.log("Start: " + position);
-    position = runBarrel(position, orderOne, displacement_One);
-    position = runBarrel(position, orderTwo, displacement_Two);
-    position = runBarrel(position, orderThree, displacement_Three);
-    if (type == "encrypt") {
-        position = mirrorPosition(position);
-    } else if (type == "decrypt") {
-        position = reverseMirrorPosition(position);
-    }
-    position = reverseBarrel(position, orderThree, displacement_Three);
-    position = reverseBarrel(position, orderTwo, displacement_Two);
-    position = reverseBarrel(position, orderOne, displacement_One);
-    console.log("zurück: " + position);
+    position = runBarrel(position, orderOne, displacement[0]);
+    position = runBarrel(position, orderTwo, displacement[1]);
+    position = runBarrel(position, orderThree, displacement[2]);
+
+    position = mirrorPosition(position);
+
+    position = reverseBarrel(position, orderThree, displacement[2]);
+    position = reverseBarrel(position, orderTwo, displacement[1]);
+    position = reverseBarrel(position, orderOne, displacement[0]);
     position--;
-    console.log("ende: " + position);
+
     return position;
 }
