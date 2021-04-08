@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Die Enigma als WebApp" />
-    <title>Enigma</title>
-  </head>
-  <body>
-    <h1>Enigma</h1>
-    <h2>Herzlich Wilkommen</h2>
-    <h3>Drücke den roten Button um zu beginnen</h3>
-    <script type="module" src="/index.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <title>Enigma</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div style="width: 100%; display: flex; padding: 40px 0 40px; justify-content: center;">
+      <img src="/Enigma.jpg" alt="Enigma Bild" />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Walze 1</span>
+      <input type="text" id="w1" class="form-control">
+      <span class="input-group-text">Walze 2</span>
+      <input type="text" id="w2" class="form-control">
+      <span class="input-group-text">Walze 3</span>
+      <input type="text" id="w3" class="form-control">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Eingabe</span>
+      <input type="text" id="input" class="form-control">
+    </div>
+    <div class="flex">
+      <button class="btn btn-primary" id="decrypt">Verschlüsseln / Entschlüsseln</button>
+      <button class="btn btn-warning" id="reset">Zurücksetzen</button>
+    </div>
+    <h1>Ausgabe:</h1>
+    <h1 id="output" style="color: red"></h1>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
