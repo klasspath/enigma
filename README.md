@@ -9,8 +9,8 @@ yarn: https://classic.yarnpkg.com/en/docs/install#windows-stable
 
 # Beachten
 
-In den Walzen/ Trommeln jeweils nur einen *kleinen* Buchstaben einganeben
-bei der eingabe nur *kleine* Buchstaben und *keine* leerzeichen verwenden 
+In den Walzen/ Trommeln jeweils nur einen *kleinen* Buchstaben einganeben.
+Bei der eingabe nur *kleine* Buchstaben und *keine* leerzeichen verwenden 
 
 # Requirements
 
