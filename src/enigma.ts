@@ -40,17 +40,6 @@ export function mirrorPosition(position: number): number {
     return position;
 }
 
-/* export function reverseMirrorPosition(position: number): number {
-    let mirrorOrder = [0, 25, 18, 21, 8, 17, 19, 12, 4, 16, 24, 14, 7, 15, 11, 13, 9, 5, 2, 6, 26, 3, 23, 22, 10, 1, 20];
-    //let mirrorOrder = [0,1,6,2,5,3,4]
-    for (let i = 0; i < mirrorOrder.length; i++) {
-        if (position == mirrorOrder[i]) {
-            position = i;
-        }
-    }
-    return position;
-} */
-
 export default function runBarrels(displacement: [number, number, number], position: number): number {
 
     /* let order_One =   [0,6,5,4,3,2,1];
