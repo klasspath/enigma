@@ -4,6 +4,9 @@ https://github.com/klasspath/inigma
 
 als Webseite: https://inigma.vercel.app/
 
+Node.js download: https://nodejs.org/en/
+yarn: https://classic.yarnpkg.com/en/docs/install#windows-stable
+
 # Beachten
 
 In den Walzen/ Trommeln jeweils nur einen *kleinen* Buchstaben einganeben
