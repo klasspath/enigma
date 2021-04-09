@@ -57,6 +57,6 @@ export default function runBarrels(displacement: [number, number, number], posit
     position = reverseBarrel(position, orderTwo, displacement[1]);
     position = reverseBarrel(position, orderOne, displacement[0]);
     position--;
-
+    
     return position;
 }
