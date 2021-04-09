@@ -12,7 +12,7 @@ bei der eingabe nur *kleine* Buchstaben und *keine* leerzeichen verwenden
 # Requirements
 
 * Node.js
-  downloade and install
+  download and install
 * yarn
   to install run in terminal: npm install --global yarn
 
