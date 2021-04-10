@@ -1,7 +1,5 @@
 # Enigma von Robin, Nico und Theo
 
-https://github.com/klasspath/inigma
-
 als Webseite: https://enigma.vercel.app/
 
 Node.js download: https://nodejs.org/en/
