@@ -3,7 +3,6 @@
 als Webseite: https://enigma.vercel.app/
 
 Node.js download: https://nodejs.org/en/
-yarn: https://classic.yarnpkg.com/en/docs/install#windows-stable
 
 # Beachten
 
